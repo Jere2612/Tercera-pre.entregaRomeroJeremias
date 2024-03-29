@@ -1,0 +1,53 @@
+{% extends "inicio.html" %}
+
+ 
+
+{% load static %}
+
+ 
+{% block contenido %}
+
+    <main class="container">
+
+        <h1 class="text-xl-center title"> instituciones </h1>
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>id</th>
+
+                    <th>ciudad</th>
+
+                    <th>telefono</th>
+
+                </tr>            
+
+            </thead>
+
+            <tbody>
+
+                {% for n in instituciones %}
+
+                <tr>
+
+                    <td>{{n.id}}</td>
+
+                    <td>{{n.ciudad}}</td>
+
+                    <td>{{n.telefono}}</td>
+
+                </tr>
+
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </main>
+ 
+{% endblock %}
